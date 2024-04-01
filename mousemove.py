@@ -17,13 +17,13 @@ def keyboard_listener():
     '''If no key is pressed in 5 seconds, move the mouse.'''
     mousemoved=False
     with mouse.Events() as events:
-        if events.get(120) is None:
+        if events.get(60) is None:
             print(mousemove())
         else:
             mousemoved=True
     with keyboard.Events() as events:
         #print(events.get(5))
-        if events.get(120) is not None:
+        if events.get(60) is not None:
             for event in events:
                     print("pressed"+str(event.key))
                     return True
